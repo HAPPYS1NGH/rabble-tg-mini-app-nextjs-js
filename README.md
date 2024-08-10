@@ -25,13 +25,17 @@ Ensure you have the following installed on your machine:
    cd rabble-tg-mini-app-nextjs-js
    ```
 
-3. **Create a `.env` or `.env.local` file in the root directory:**
+3. **Create a `.env.local` file in the root directory and copy the contents of `.env.sample`:**
 
-   Obtain the WalletConnect project ID from [WalletConnect](https://cloud.walletconnect.com/).
+   - Obtain the WalletConnect project ID from [WalletConnect](https://cloud.walletconnect.com/).
+
+   - Make sure to select the App Kit.
 
    ```env
-   WALLET_CONNECT_PROJECT_ID=<your_wallet_connect_project_id>
+   NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=<your_wallet_connect_project_id>
    ```
+
+   - According change the other environment details to development or production.
 
 4. **Install dependencies:**
 
@@ -91,11 +95,18 @@ You can always use ngrok or any proxy service to expose the endpoint.
 
 2. **Register a new bot by using the /newbot command and follow the prompts to choose a name and username.**
 
-3. **While in BotFather, set the /setmenubutton and select your bot, then paste the proxy link.**
+3. **While in BotFather, use the /setmenubutton command (It may not autocomplete).**
 
-4. **Set the name of the button which will be used to start the mini app.**
+4. **Click on the bottom right square to choose the bot**
+   [Selecting the Bot](/src/assets/botfather-tut1.png?raw=true)
 
-5. **Go to the Bot and now you can see a small button next to the chat which will bring up the Mini App.**
+5. **Paste the URL for your App in which will be LocalTunnel's during development.**
+
+6. **Set the name of the button which will be used to start the mini app.**
+
+7. **Go to the Bot and now you can see a small button next to the chat which will bring up the Mini App.**
+
+8. **Repeat the steps 3-7 when you have the production URL.**
 
 ## Interacting with Contracts
 

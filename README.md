@@ -98,7 +98,7 @@ You can always use ngrok or any proxy service to expose the endpoint.
 3. **While in BotFather, use the /setmenubutton command (It may not autocomplete).**
 
 4. **Click on the bottom right square to choose the bot**
-   [Selecting the Bot](/src/assets/botfather-tut1.png?raw=true)
+   ![Selecting the Bot](/src/assets/botfather-tut1.png?raw=true)
 
 5. **Paste the URL for your App in which will be LocalTunnel's during development.**
 

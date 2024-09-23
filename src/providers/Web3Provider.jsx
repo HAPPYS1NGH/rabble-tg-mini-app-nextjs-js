@@ -52,8 +52,8 @@ if (!projectId) {
 const metadata = {
   name: "rabble-starter-kit",
   description: "Rabble Mini App Starter Kit",
-  url: "https://rabble-tg-mini-app-nextjs-js.vercel.app/", // origin must match your domain & subdomain
-  icons: ["https://rabble-tg-mini-app-nextjs-js.vercel.app/butterfly.svg"]
+  url: "https://rabble-tg-mini-app-nextjs-js-git-walletconnect-happysingh.vercel.app/", // origin must match your domain & subdomain
+  icons: ["https://rabble-tg-mini-app-nextjs-js-git-walletconnect-happysingh.vercel.app/butterfly.svg"]
 }
 
 // Create the modal

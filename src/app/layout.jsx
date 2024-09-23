@@ -1,7 +1,9 @@
-import { Outfit, Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
-import Web3Provider from "@/providers/Web3Provider";
+
+import { headers } from "next/headers";
+import { Outfit, Be_Vietnam_Pro } from "next/font/google";
 import Layout from "@/providers/Layout";
+import Web3Provider from "@/providers/Web3Provider";
 import { TelegramProvider } from "@/providers/TelegramProvider";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -19,10 +21,12 @@ export const metadata = {
 export default function RootLayout({
   children,
 }) {
+  const cookies = headers().get('cookie')
+
   return (
     <html lang="en" className={`${outfit.variable} ${beVietnamPro.variable}`}>
       <body className={beVietnamPro.className}>
-        <Web3Provider>
+        <Web3Provider cookies={cookies}>
           <TelegramProvider>
             <Layout>{children}</Layout>
           </TelegramProvider>

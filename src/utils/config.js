@@ -1,39 +1,24 @@
-import { getDefaultWallets, getDefaultConfig } from "@rainbow-me/rainbowkit"
-import {
-  argentWallet,
-  trustWallet,
-  ledgerWallet,
-} from "@rainbow-me/rainbowkit/wallets"
-import {
-  arbitrum,
-  arbitrumSepolia,
-  localhost,
-} from "wagmi/chains"
+import { cookieStorage, createStorage, http } from "@wagmi/core";
+import { WagmiAdapter } from "@reown/appkit-adapter-wagmi";
+import { arbitrum, localhost } from "@reown/appkit/networks";
 
-const { wallets } = getDefaultWallets()
+// Get projectId from https://cloud.reown.com
+export const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID;
 
-export const WALLETCONNECT_PROJECT_ID =
-  process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ?? ""
-if (!WALLETCONNECT_PROJECT_ID) {
-  console.warn(
-    "You need to provide a NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID env variable"
-  )
+if (!projectId) {
+  throw new Error("Project ID is not defined");
 }
-export const config = getDefaultConfig({
-  appName: "RainbowKit demo",
-  projectId: WALLETCONNECT_PROJECT_ID,
-  wallets: [
-    ...wallets,
-    {
-      groupName: "Other",
-      wallets: [argentWallet, trustWallet, ledgerWallet],
-    },
-  ],
-  chains: [
-    arbitrumSepolia,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true"
-      ? [arbitrumSepolia, arbitrum, localhost]
-      : []),
-  ],
+
+export const networks = [arbitrum];
+
+//Set up the Wagmi Adapter (Config)
+export const wagmiAdapter = new WagmiAdapter({
+  storage: createStorage({
+    storage: cookieStorage,
+  }),
   ssr: true,
-})
+  projectId,
+  networks,
+});
+
+export const config = wagmiAdapter.wagmiConfig;

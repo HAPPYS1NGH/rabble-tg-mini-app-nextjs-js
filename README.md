@@ -23,7 +23,7 @@ Ensure you have the following installed on your machine:
 1. **Clone the repository or click on the "Use this template" button:**
 
    ```bash
-   git clone https://github.com/HAPPYS1NGH/rabble-tg-mini-app-nextjs-js
+   git clonehttps://github.com/HAPPYS1NGH/rabble-tg-mini-app-nextjs-js/tree/privy
    ```
 
 2. **Navigate to the project directory:**

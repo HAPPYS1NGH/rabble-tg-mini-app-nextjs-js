@@ -1,4 +1,4 @@
-# ETH Telegram Mini App NextJS Starter Kit
+# ETH Telegram Mini App NextJS Starter Kit with WalletConnect/Reown
 
 ## Getting Started
 
@@ -9,6 +9,7 @@ This starter kit helps you create a mini application integrated with Ethereum an
 [Blog on using this Starter Kit](https://medium.com/rabble-labs/deploy-your-first-telegram-mini-app-on-ethereum-8b589f4e6411)
 
 **For Visual Learners**
+
 [![YouTube](http://i.ytimg.com/vi/cFLKu4sl76I/hqdefault.jpg)](https://www.youtube.com/watch?v=cFLKu4sl76I)
 
 ### Prerequisites
@@ -23,7 +24,7 @@ Ensure you have the following installed on your machine:
 1. **Clone the repository or click on the "Use this template" button:**
 
    ```bash
-   git clone https://github.com/HAPPYS1NGH/rabble-tg-mini-app-nextjs-js
+   git clone https://github.com/HAPPYS1NGH/rabble-tg-mini-app-nextjs-js/tree/walletconnect
    ```
 
 2. **Navigate to the project directory:**
@@ -34,7 +35,7 @@ Ensure you have the following installed on your machine:
 
 3. **Create a `.env.local` file in the root directory and copy the contents of `.env.sample`:**
 
-   - Obtain the WalletConnect project ID from [WalletConnect](https://cloud.walletconnect.com/).
+   - Obtain the WalletConnect project ID from [Reown(prev Walletconnect)](https://cloud.reown.com/).
 
    - Make sure to select the App Kit.
 

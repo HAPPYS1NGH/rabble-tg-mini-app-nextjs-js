@@ -41,7 +41,7 @@ Ensure you have the following installed on your machine:
    - You will find the App Id in Projects under API Keys.
 
    ```env
-   PRIVY_PROJECT_ID=<your_privy_project_id>
+   NEXT_PUBLIC_PRIVY_PROJECT_ID=<your_privy_project_id>
    ```
 
    - Accordingly, change the other environment details to development or production.

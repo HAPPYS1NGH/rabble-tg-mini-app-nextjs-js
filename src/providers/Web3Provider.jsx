@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 
 export default function Web3Provider({ children }) {
   return (
-    <PrivyProvider appId={process.env.PRIVY_PROJECT_ID} config={privyConfig}>
+    <PrivyProvider appId={process.env.NEXT_PUBLIC_PRIVY_PROJECT_ID} config={privyConfig}>
       <QueryClientProvider client={queryClient}>
         <WagmiProvider config={config}>{children}</WagmiProvider>
       </QueryClientProvider>

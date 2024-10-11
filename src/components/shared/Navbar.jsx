@@ -30,7 +30,7 @@ const Navbar = () => {
                 onClick={toggleDropdown}
               >
                 <div className="flex justify-center align-middle gap-4 text-sm">
-                  <p className="text-sm">{chain.name
+                  <p className="text-sm">{chain?.name
                     .split(' ')
                     .map(word => word.slice(0, 3).toUpperCase()).join(' ')}</p>
                   <p className="text-sm">{balanceData?.formatted?.slice(0, 4)} {balanceData?.symbol}</p>

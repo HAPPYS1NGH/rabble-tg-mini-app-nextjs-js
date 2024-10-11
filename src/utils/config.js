@@ -4,10 +4,9 @@ import { http } from "wagmi";
 import { createConfig } from "@privy-io/wagmi";
 
 export const config = createConfig({
-  chains: [mainnet, sepolia, arbitrumSepolia, arbitrum],
+  chains: [arbitrumSepolia],
   transports: {
-    [mainnet.id]: http(),
-    [sepolia.id]: http(),
+    [arbitrumSepolia.id]: http(),
   },
 });
 

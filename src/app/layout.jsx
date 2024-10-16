@@ -1,5 +1,4 @@
 import { Outfit, Be_Vietnam_Pro } from "next/font/google";
-import "@rainbow-me/rainbowkit/styles.css";
 import "./globals.css";
 import Web3Provider from "@/providers/Web3Provider";
 import Layout from "@/providers/Layout";

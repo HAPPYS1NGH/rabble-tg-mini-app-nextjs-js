@@ -23,7 +23,7 @@ Ensure you have the following installed on your machine:
 1. **Clone the repository or click on the "Use this template" button:**
 
    ```bash
-   git clone https://github.com/HAPPYS1NGH/rabble-tg-mini-app-nextjs-js
+   git clonehttps://github.com/HAPPYS1NGH/rabble-tg-mini-app-nextjs-js/tree/privy
    ```
 
 2. **Navigate to the project directory:**
@@ -34,15 +34,17 @@ Ensure you have the following installed on your machine:
 
 3. **Create a `.env.local` file in the root directory and copy the contents of `.env.sample`:**
 
-   - Obtain the WalletConnect project ID from [WalletConnect](https://cloud.walletconnect.com/).
+   - Obtain the Privy project ID from [Privy](https://dashboard.privy.io/apps).
 
-   - Make sure to select the App Kit.
+   - Make sure to Create a React Project.
+
+   - You will find the App Id in Projects under API Keys.
 
    ```env
-   NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=<your_wallet_connect_project_id>
+   NEXT_PUBLIC_PRIVY_PROJECT_ID=<your_privy_project_id>
    ```
 
-   - According change the other environment details to development or production.
+   - Accordingly, change the other environment details to development or production.
 
 4. **Install dependencies:**
 
@@ -119,7 +121,7 @@ You can always use ngrok or any proxy service to expose the endpoint.
 
 ### Registering Your Bot on Telegram on Production
 
-0. **Deploy your App on any Platform like Vercel or Netlify**
+0. **Deploy your App on any Platform like Vercel or Netlify.**
 
 1. **Open Telegram and search for `BotFather`.**
 

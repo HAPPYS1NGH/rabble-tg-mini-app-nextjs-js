@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import ConnectButton from "@/components/shared/ConnectButton"
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
@@ -21,19 +21,17 @@ const Navbar = () => {
       <div className="flex space-x-4 ">
         <Link
           href="/"
-          className={`${
-            pathname == "/" ? "text-rabble" : "text-color  hover:text-color/90"
-          } `}
+          className={`${pathname == "/" ? "text-rabble" : "text-color  hover:text-color/90"
+            } `}
         >
           Home
         </Link>
         <Link
           href="/contract"
-          className={`${
-            pathname == "/contract"
+          className={`${pathname == "/contract"
               ? "text-rabble"
               : "text-color hover:text-color/90"
-          } `}
+            } `}
         >
           Contract
         </Link>
